@@ -11,3 +11,14 @@ NOTE: This is a fork of https://github.com/hanshuebner/cl-mime
 it includes following patches:
 
 * Fixed parsing of header parameters surrounded by " (https://github.com/hanshuebner/cl-mime/pull/3).
+
+## Publish
+
+Source-only OCI publish is centralized in [`cl-stack-systems`](https://github.com/egao1980/cl-stack-systems)
+(`imports/cl-mime/qlfile` pin + shared `publish.yml`). Packaging metadata lives in the `.asd`
+(`auto-package-spec`):
+
+```bash
+gh workflow run publish.yml -R egao1980/cl-stack-systems -f import=cl-mime
+```
+
