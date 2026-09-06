@@ -32,6 +32,7 @@
   :maintainer "Robert Marlow <bobstopper@bobturf.org>"
   :depends-on (:cl-ppcre :cl-base64 :cl-qprint)
   :serial t
+  :properties (:cl-repo (:ci (:with ("rove" "cl-mime-test"))))
   :components ((:file "package")
                (:file "utilities")
                (:file "classes")

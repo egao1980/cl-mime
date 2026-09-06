@@ -7,4 +7,5 @@
                 :components ((:file "package")
                              (:file "parse-mime"))))
   :perform (test-op (op c)
-                    (symbol-call '#:rove '#:run c)))
+             (unless (symbol-call '#:rove '#:run c)
+               (error "tests failed for ~A" (component-name c)))))
